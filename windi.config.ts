@@ -2,7 +2,7 @@ import { defineConfig } from 'windicss/helpers'
 import formsPlugin from 'windicss/plugin/forms'
 
 export default defineConfig({
-  darkMode: 'class',
+  darkMode: 'class', // or 'media'
   safelist: 'p-3 p-4 p-5',
   theme: {
     extend: {
