@@ -14,7 +14,7 @@ const text = ref('tt')
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 * {
   margin: 0;
   padding: 0;
