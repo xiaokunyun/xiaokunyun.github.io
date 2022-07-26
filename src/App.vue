@@ -1,15 +1,16 @@
 <script setup lang="ts">
-// import { isMobileTerminal } from '@/util/flex'
-
 const text = ref('tt')
 </script>
 
 <template>
-  <div class=" warps h-screen w-screen fixed top-0 left-0  ">
-    <div class="w-screen h-16">
+  <div class="warps fixed h-screen w-screen top-0 left-0 ">
+    <!-- <div class="w-screen h-16"> -->
       <Header></Header>
-    </div>
+    <!-- </div> -->
+    <div class="mt-16">
+      <Rotate/>
     {{ text }}
+    </div>
   </div>
 </template>
 

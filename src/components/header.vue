@@ -1,30 +1,28 @@
 <template>
-  <div class="fixed top-0 w-11/12 h-16">
-    <!-- 移动 -->
-    <div v-if="isMobileTerminal" class="flex justify-between items-center">
-      <div>
-        <img src="@/assets/images/logo.png" alt="logo">
+  <div class="fixed top-0 left-0 w-screen h-16 text-xs overflow-hidden">
+    <div class="w-screen h-16 flex justify-between items-center">
+      <div class="w-1/5 flex justify-center items-center">
+        <img src="@/assets/images/logo.png" class="w-10 h-4" alt="logo">
       </div>
-      <div>
-       <div v-for="(item,index) in titleList" :key="index">{{item.title}}</div>
+      <div class="w-4/5 flex">
+       <div class="text-black w-1/4 flex items-center text-xs" :class="{'active':index}" v-for="(item,index) in titleList" :key="index">{{item.title}}</div>
       </div>
-    </div>
-    <!-- pc -->
-    <div v-else class="flex justify-center items-center">
-       <div v-for="(item,index) in titleList" :key="index">{{item.title}}</div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { isMobileTerminal } from '@/util/flex'
+// import { isMobileTerminal } from '@/util/flex'
 const titleList=ref([
-  {title:"home"},
-  {title:"my"},
-  {title:"home"},
-  {title:"home"},
+  {title:"首页"},
+  {title:"关于我们"},
+  {title:"在线"},
+  {title:"留言"},
 ])
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+// .active{
+//   border-bottom: 3px solid white;
+// }
 </style>
