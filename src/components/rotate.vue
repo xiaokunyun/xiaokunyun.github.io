@@ -32,8 +32,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
 }
 
 .box {
@@ -48,8 +48,8 @@
 .box div {
   box-sizing: border-box;
   position: absolute;
-  height: 160px;
-  width: 160px;
+  height: 100px;
+  width: 100px;
   border: 3px solid rgba(147, 197, 253);
   // background: rgba(255, 200, 100, .8);
   text-align: center;
