@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="flex justify-center items-center">
+  <!-- <div class="">
     <div class="box relative">
       <div class="one">A</div>
       <div class="two">B</div>
@@ -9,7 +9,7 @@
       <div class="six">F</div>
     </div>
   </div> -->
-  <div class="view">
+  <div class="flex justify-center items-center w-40 h-40">
     <div class="box">
       <div class="one">A</div>
       <div class="two">B</div>
@@ -19,23 +19,11 @@
       <div class="six">F</div>
     </div>
   </div>
-
-
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
-.view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-}
-
 .box {
   transform-style: preserve-3d; // 开启3d
   perspective: 200px; // 透视
