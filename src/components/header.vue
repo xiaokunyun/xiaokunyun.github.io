@@ -19,15 +19,8 @@
 </template>
 
 <script setup lang="ts">
-// import { isMobileTerminal } from '@/util/flex'
 const router = useRouter();
 const list = ref(router.getRoutes().filter((v) => v.meta.requiresAuth));
-// const titleList=ref([
-//   {title:"首页"},
-//   {title:"关于我们"},
-//   {title:"在线"},
-//   {title:"留言"},
-// ])
 </script>
 
 <style scoped lang="scss">
