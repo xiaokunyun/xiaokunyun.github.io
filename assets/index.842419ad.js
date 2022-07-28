@@ -1,1 +1,0 @@
-import{_ as t,o as c,c as n,a as s,b as o,d as a,e as _}from"./index.8a0afed3.js";const r={},d=a(" index "),i={class:"flex justify-center items-center"};function l(f,m){const e=_;return c(),n("div",null,[d,s("div",i,[o(e)])])}const u=t(r,[["render",l]]);export{u as default};
