@@ -5,7 +5,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    "eslint:recommended",
+    // "eslint:recommended",
     "plugin:vue/vue3-essential",
     "plugin:@typescript-eslint/recommended",
   ],
@@ -19,11 +19,12 @@ module.exports = {
   rules: {
     semi: "off", //["error", "always"]
     quotes: "off", // ["error", "double"],
-    "vue/multi-word-component-names": [
-      "error",
-      {
-        ignores: ["Header", "Rotate"],
-      },
-    ],
+    "vue/multi-word-component-names": "off",
+    // "vue/multi-word-component-names": [
+    //   "error",
+    //   {
+    //     ignores: ["Header", "Rotate", "Line"],
+    //   },
+    // ],
   },
 };
