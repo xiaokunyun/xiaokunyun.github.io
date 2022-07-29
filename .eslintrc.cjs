@@ -18,6 +18,8 @@ module.exports = {
   },
   plugins: ["vue", "@typescript-eslint"],
   rules: {
+    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     semi: "off", //["error", "always"]
     quotes: "off", // ["error", "double"],
     "vue/multi-word-component-names": "off",

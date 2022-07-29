@@ -1,11 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="warps fixed h-screen w-screen top-0 left-0">
-    <Header />
-    <div class="mt-16 flex justify-center items-center h-screen w-screen">
-      <RouterView />
-    </div>
+  <div class="warpsfixed h-screen w-screen top-0 left-0">
+    <RouterView />
   </div>
 </template>
 

@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { isMobileTerminal } from "@/util/flex";
 export const routerList: RouteRecordRaw[] = [
   {
     path: "/",
     name: "index",
-    component: () => import("@/views/index.vue"),
+    component: () => import("@/layout/index.vue"),
     meta: {
       requiresAuth: true,
       title: "主页",
@@ -37,8 +38,12 @@ export const routerList: RouteRecordRaw[] = [
     },
   },
 ];
+export const mobileRoutes: Array<RouteRecordRaw> = [
+  { path: "/", component: () => import("@/layout/index.vue") },
+  { path: "/video/:id", component: () => import("@/views/Video/index.vue") },
+];
 const router = createRouter({
   history: createWebHistory(),
-  routes: routerList,
+  routes: isMobileTerminal.value ? mobileRoutes : routerList,
 });
 export default router;
