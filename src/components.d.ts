@@ -8,6 +8,7 @@ export {};
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
     Header: typeof import("./components/Header.vue")["default"];
+    Line: typeof import("./components/Echarts/line.vue")["default"];
     Rotate: typeof import("./components/Rotate.vue")["default"];
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];
