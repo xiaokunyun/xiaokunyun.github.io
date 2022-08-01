@@ -13,7 +13,7 @@
 import axios from "axios";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
-import AppHeader from "@/components/app-header.vue";
+import AppHeader from "@/layout/components/mobile/app-header.vue";
 import VideoPlay from "./components/video-play.vue";
 import VideoInfo from "./components/video-info.vue";
 import VideoBottom from "./components/video-bottom.vue";
