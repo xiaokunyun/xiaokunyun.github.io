@@ -1,0 +1,1 @@
+System.register(["./index-legacy.eb318855.js"],(function(e){"use strict";var n,t,r;return{setters:[e=>{n=e._,t=e.a,r=e.o}],execute:function(){e("default",n({},[["render",function(e,n){return r(),t("div",null,"online")}]]))}}}));
