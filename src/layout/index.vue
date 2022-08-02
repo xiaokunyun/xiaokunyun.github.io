@@ -25,13 +25,13 @@
 
 <script setup lang="ts">
 //mobile
-import AppHeader from "./components/mobile/app-header.vue";
-import HomeChannel from "./components/mobile/home-channel.vue";
-import HomeSwipe from "./components/mobile/home-swipe.vue";
-import HomeVideoList from "./components/mobile/home-video-list.vue";
+import AppHeader from './components/mobile/app-header.vue';
+import HomeChannel from './components/mobile/home-channel.vue';
+import HomeSwipe from './components/mobile/home-swipe.vue';
+import HomeVideoList from './components/mobile/home-video-list.vue';
 //pc
-import Header from "./components/pc/Header.vue";
-import { isMobileTerminal } from "@/util/flex";
+import Header from './components/pc/Header.vue';
+import { isMobileTerminal } from '@/util/flex';
 </script>
 
 <style scoped></style>

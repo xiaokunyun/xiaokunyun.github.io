@@ -10,13 +10,13 @@
 </template>
 
 <script lang="ts" setup>
-import axios from "axios";
-import { ref } from "vue";
-import { useRoute } from "vue-router";
-import AppHeader from "@/layout/components/mobile/app-header.vue";
-import VideoPlay from "./components/video-play.vue";
-import VideoInfo from "./components/video-info.vue";
-import VideoBottom from "./components/video-bottom.vue";
+import axios from 'axios';
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+import AppHeader from '@/layout/components/mobile/app-header.vue';
+import VideoPlay from './components/video-play.vue';
+import VideoInfo from './components/video-info.vue';
+import VideoBottom from './components/video-bottom.vue';
 
 // 🔔 ? 表示属性是可选的，可有可无
 export interface IVideoInfo {
@@ -39,13 +39,13 @@ const videoInfo = ref<IVideoInfo>({});
 const route = useRoute();
 
 axios({
-  url: "/videoDetail",
-  method: "get",
+  url: '/videoDetail',
+  method: 'get',
   // 根据路由对象的 id 参数发送请求获取对应的视频详情
   params: { id: route.params.id },
 }).then(({ data }) => {
   videoInfo.value = data.result;
-  console.log("视频详情数据", data.result);
+  console.log('视频详情数据', data.result);
 });
 </script>
 

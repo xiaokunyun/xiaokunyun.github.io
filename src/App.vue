@@ -13,6 +13,11 @@
 }
 
 .warps {
-  background-image: radial-gradient(circle, LightPink, LightSkyBlue, DarkTurquoise);
+  background-image: radial-gradient(
+    circle,
+    LightPink,
+    LightSkyBlue,
+    DarkTurquoise
+  );
 }
 </style>

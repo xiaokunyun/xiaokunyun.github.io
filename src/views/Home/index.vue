@@ -11,8 +11,8 @@
 
 <script setup lang="ts">
 // Vue3 的 script setup 只需要导入组件，无需注册，直接可以在模板中使用
-import AppHeader from "@/components/app-header.vue";
-import HomeChannel from "./components/home-channel.vue";
-import HomeSwipe from "./components/home-swipe.vue";
-import HomeVideoList from "./components/home-video-list.vue";
+import AppHeader from '@/components/app-header.vue';
+import HomeChannel from './components/home-channel.vue';
+import HomeSwipe from './components/home-swipe.vue';
+import HomeVideoList from './components/home-video-list.vue';
 </script>

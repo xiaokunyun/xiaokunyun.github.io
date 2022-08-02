@@ -1,19 +1,19 @@
-import Mock from "mockjs";
-import navList from "./data/navList";
-import swiperList from "./data/swiperList";
-import videosList from "./data/videosList";
-import recommendList from "./data/recommendList";
-import commentsList from "./data/commentsList";
-import videoDetailList from "./data/videoDetailList";
+import Mock from 'mockjs';
+import navList from './data/navList';
+import swiperList from './data/swiperList';
+import videosList from './data/videosList';
+import recommendList from './data/recommendList';
+import commentsList from './data/commentsList';
+import videoDetailList from './data/videoDetailList';
 
 // mock的配置
 Mock.setup({
   // 随机延时50-1000毫秒
-  timeout: "50-1000",
+  timeout: '50-1000',
 });
 
 // 轮播图
-Mock.mock(/\/swiperList/, "get", () => {
+Mock.mock(/\/swiperList/, 'get', () => {
   return {
     code: 0,
     result: swiperList,
@@ -21,28 +21,28 @@ Mock.mock(/\/swiperList/, "get", () => {
 });
 
 // 频道菜单
-Mock.mock(/\/navList/, "get", () => {
+Mock.mock(/\/navList/, 'get', () => {
   return {
     code: 0,
     result: navList,
   };
 });
 
-Mock.mock(/\/videosList/, "get", () => {
+Mock.mock(/\/videosList/, 'get', () => {
   return {
     code: 0,
     result: videosList,
   };
 });
 
-Mock.mock(/\/recommendList/, "get", () => {
+Mock.mock(/\/recommendList/, 'get', () => {
   return {
     code: 0,
     result: recommendList,
   };
 });
 
-Mock.mock(/\/commentsList/, "get", () => {
+Mock.mock(/\/commentsList/, 'get', () => {
   return {
     code: 0,
     result: {
@@ -57,10 +57,10 @@ interface IMockConfig {
   type: string;
   url: string;
 }
-Mock.mock(/\/videoDetail/, "get", ({ url }: IMockConfig) => {
-  const querystr = url.split("?")[1];
+Mock.mock(/\/videoDetail/, 'get', ({ url }: IMockConfig) => {
+  const querystr = url.split('?')[1];
   const queryObj = new URLSearchParams(querystr);
-  const id = queryObj.get("id");
+  const id = queryObj.get('id');
   return Mock.mock({
     code: 0,
     result: function () {

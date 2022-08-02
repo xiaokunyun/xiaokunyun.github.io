@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import axios from "axios";
-import AppVideoItem from "@/components/app-video-item.vue";
+import { ref } from 'vue';
+import axios from 'axios';
+import AppVideoItem from '@/components/app-video-item.vue';
 
 interface IVideoItem {
   id: number;
@@ -20,8 +20,8 @@ interface IVideoItem {
 
 const list = ref<IVideoItem[]>([]);
 axios({
-  method: "get",
-  url: "/recommendList",
+  method: 'get',
+  url: '/recommendList',
 }).then(({ data }) => {
   console.log(data.result);
   list.value = data.result;

@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import axios from "axios";
-import { Tab, Tabs } from "vant";
+import { ref } from 'vue';
+import axios from 'axios';
+import { Tab, Tabs } from 'vant';
 // TypeScript 的接口用于标记数据格式
 interface INavItem {
   id: string;
@@ -20,8 +20,8 @@ const active = ref(0);
 const list = ref<INavItem[]>([]);
 
 axios({
-  url: "/navList",
-  method: "get",
+  url: '/navList',
+  method: 'get',
 }).then((res) => {
   console.log(res.data);
   list.value = res.data.result;
