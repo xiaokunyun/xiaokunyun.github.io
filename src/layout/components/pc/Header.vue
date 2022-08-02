@@ -7,7 +7,6 @@
       <div class="w-4/5 flex">
         <div
           class="text-black w-1/4 flex items-center text-xs"
-          :class="{ active: index }"
           v-for="(item, index) in list"
           :key="index"
         >
@@ -19,12 +18,14 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+import { ref } from 'vue';
 const router = useRouter();
 const list = ref(router.getRoutes().filter((v) => v.meta.requiresAuth));
 </script>
 
 <style scoped lang="scss">
-// .active{
-//   border-bottom: 3px solid white;
-// }
+.active {
+  border-bottom: 3px solid white;
+}
 </style>

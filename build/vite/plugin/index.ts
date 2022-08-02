@@ -4,10 +4,17 @@ import legacy from '@vitejs/plugin-legacy';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver, ArcoResolver } from 'unplugin-vue-components/resolvers';
+import alias from '@rollup/plugin-alias';
 export default function createVitePlugins() {
   const vitePlugins = [
     vue(),
-    WindiCSS(),
+    alias(),
+    WindiCSS({
+      scan: {
+        dirs: ['.'], // all files in the cwd
+        fileExtensions: ['vue', 'js', 'ts'], // also enabled scanning for js/ts
+      },
+    }),
     legacy({ targets: ['defaults', 'not IE 11'] }),
     AutoImport({
       include: [
@@ -20,8 +27,8 @@ export default function createVitePlugins() {
       dts: false, // "src/auto-imports.d.ts",
       // dts: false
       eslintrc: {
-        enabled: true, // Default `false`
-        filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
+        enabled: false, // Default `false`
+        // filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
         globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
       },
     }),
