@@ -21,11 +21,11 @@ interface IVideoItem {
 const list = ref<IVideoItem[]>([]);
 
 axios({
-  method: 'get',
+  method: 'post',
   url: '/videosList',
 }).then((res) => {
-  console.log('视频列表的数据', res.data.result);
-  list.value = res.data.result;
+  console.log('视频列表的数据', res.data.data);
+  list.value = res.data.data;
 });
 </script>
 

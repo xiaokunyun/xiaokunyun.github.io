@@ -5,6 +5,9 @@ import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver, ArcoResolver } from 'unplugin-vue-components/resolvers';
 import alias from '@rollup/plugin-alias';
+import { viteMockServe } from 'vite-plugin-mock';
+
+// import { createMock } from './mock';
 export default function createVitePlugins() {
   const vitePlugins = [
     vue(),
@@ -24,7 +27,7 @@ export default function createVitePlugins() {
         /\.md$/, // .md
       ],
       imports: ['vue', 'vue-router'],
-      dts: false, // "src/auto-imports.d.ts",
+      dts: 'src/auto-imports.d.ts', //false,
       // dts: false
       eslintrc: {
         enabled: false, // Default `false`
@@ -34,11 +37,21 @@ export default function createVitePlugins() {
     }),
     Components({
       resolvers: [VantResolver(), ArcoResolver()],
-      // dirs: ["src/components"],
-      dts: false, //"src/components.d.ts",
+      dirs: ['src/components'],
+      dts: 'src/components.d.ts', //false, //
+    }),
+    // mock支持
+    viteMockServe({
+      mockPath: 'src/mock',
+      localEnabled: true,
+      prodEnabled: true, // isBuild && VITE_BUILD_MOCK === 'true',
+      // injectCode: `
+      //         import { setupProdMockServer } from './mockProdServer';
+      //         setupProdMockServer();
+      //     `,
     }),
   ];
-  vitePlugins.push();
+  // vitePlugins.push(createMock());
 
   return vitePlugins;
 }

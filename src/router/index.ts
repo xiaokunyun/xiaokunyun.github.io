@@ -6,7 +6,7 @@ export const routerList: RouteRecordRaw[] = [
     name: 'index',
     component: () => import('@/layout/index.vue'),
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: '主页',
     },
   },

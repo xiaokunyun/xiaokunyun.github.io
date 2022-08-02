@@ -6,21 +6,9 @@
     lazy-render
   >
     <van-swipe-item v-for="item in list" :key="item.imgSrc">
-      <img :src="item.imgSrc" style="width: 100%" />
+      <img :src="item.imgSrc" style="width: 100%; height: 200px" />
     </van-swipe-item>
   </van-swipe>
-  <a-carousel
-    :style="{
-      width: '100%',
-      height: '200px',
-    }"
-    :default-current="2"
-    @change="handleChange"
-  >
-    <a-carousel-item v-for="item in list" :key="item.imgSrc">
-      <a-image width="100%" :src="item.imgSrc" />
-    </a-carousel-item>
-  </a-carousel>
 </template>
 
 <script setup lang="ts">
@@ -35,10 +23,10 @@ interface ISwiper {
 const list = ref<ISwiper[]>([]);
 axios({
   url: '/swiperList',
-  method: 'get',
+  method: 'post',
 }).then((res) => {
-  console.log('轮播图数据', res.data.result);
-  list.value = res.data.result;
+  console.log('轮播图数据', res.data.data);
+  list.value = res.data.data;
 });
 const handleChange = (value: any) => {
   console.log(value);

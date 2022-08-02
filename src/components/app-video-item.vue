@@ -2,7 +2,12 @@
   <router-link class="v-card" :to="`/video/${video.id}`">
     <div class="card">
       <div class="card-img">
-        <img class="pic" :src="video.imgSrc" :alt="video.desc" />
+        <!-- <img class="pic" :src="video.imgSrc" :alt="video.desc" /> -->
+        <img
+          class="pic"
+          src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp"
+          :alt="video.desc"
+        />
       </div>
       <div class="count">
         <span>
@@ -44,14 +49,16 @@ defineProps({
 
 <style lang="less" scoped>
 .v-card {
-  width: 50%;
+  width: 45%;
   padding: 2vw 1vw;
+
   .card {
     position: relative;
     background: #f3f3f3 url(~@/assets/images/default.png) center no-repeat;
     background-size: 36%;
     border-radius: 0.53333vw;
     overflow: hidden;
+
     .card-img {
       .pic {
         height: 100px;
@@ -59,6 +66,7 @@ defineProps({
         object-fit: cover;
       }
     }
+
     .count {
       background-image: linear-gradient(0deg, #000000d9, #0000);
       color: #fff;
@@ -71,6 +79,7 @@ defineProps({
       align-items: center;
       justify-content: space-between;
       padding: 1.2vw 1.5vw;
+
       span {
         .iconfont {
           font-size: 3vw;
@@ -78,6 +87,7 @@ defineProps({
       }
     }
   }
+
   .title {
     margin-top: 1.5vw;
     font-size: 3.2vw;

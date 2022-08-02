@@ -4,7 +4,7 @@ const api = axios.create({
   baseURL: 'http://localhost:3251',
   // baseURL: import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true' ? '/proxy/' : import.meta.env.VITE_APP_API_BASEURL,
   timeout: 1000,
-  headers: { 'X-Custom-Header': 'foobar' },
+  // headers: { 'X-Custom-Header': 'foobar' },
 });
 // 添加请求拦截器
 api.interceptors.request.use(
