@@ -1,0 +1,1 @@
+System.register(["./index-legacy.19ee53c3.js"],(function(e){"use strict";var t,c,n;return{setters:[e=>{t=e.d,c=e.a,n=e.b}],execute:function(){e("default",t({__name:"contact",setup:e=>(e,t)=>(c(),n("div",null," contact "))}))}}}));
