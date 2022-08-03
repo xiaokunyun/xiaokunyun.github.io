@@ -43,12 +43,13 @@ export default function createVitePlugins() {
     // mock支持
     viteMockServe({
       mockPath: 'src/mock',
+      supportTs: true,
       localEnabled: true,
       prodEnabled: true, // isBuild && VITE_BUILD_MOCK === 'true',
-      // injectCode: `
-      //         import { setupProdMockServer } from './mockProdServer';
-      //         setupProdMockServer();
-      //     `,
+      injectCode: `
+      import { setupProdMockServer } from '../src/mock/_createProductionServer';
+      setupProdMockServer();
+          `,
     }),
   ];
   // vitePlugins.push(createMock());
