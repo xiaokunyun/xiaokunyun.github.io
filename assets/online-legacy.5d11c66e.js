@@ -1,0 +1,1 @@
+System.register(["./index-legacy.922cd93b.js"],(function(e){"use strict";var n,t,r;return{setters:[e=>{n=e._,t=e.b,r=e.a}],execute:function(){e("default",n({},[["render",function(e,n){return r(),t("div",null,"online")}]]))}}}));
