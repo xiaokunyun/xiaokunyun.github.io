@@ -1,0 +1,1 @@
+System.register(["./index-legacy.69862dad.js"],(function(e){"use strict";var t,n,r;return{setters:[e=>{t=e._,n=e.b,r=e.a}],execute:function(){e("default",t({},[["render",function(e,t){return r(),n("div",null,"about")}]]))}}}));
