@@ -3,11 +3,7 @@
     <div class="card">
       <div class="card-img">
         <!-- <img class="pic" :src="video.imgSrc" :alt="video.desc" /> -->
-        <img
-          class="pic"
-          src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp"
-          :alt="video.desc"
-        />
+        <img class="pic" :src="video.imgSrc" :alt="video.desc" />
       </div>
       <div class="count">
         <span>

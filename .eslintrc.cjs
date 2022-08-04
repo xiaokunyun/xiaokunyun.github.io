@@ -11,13 +11,7 @@ module.exports = {
     'plugin:prettier/recommended', // 新增，必须放在最后面
   ],
   parser: 'vue-eslint-parser',
-  // "prettier/prettier": [
-  //   "error",
-  //   {
-  //     "singleQuote": true,
-  //     "parser": "flow"
-  //   }
-  // ],
+
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
