@@ -1,1 +1,0 @@
-System.register(["./index-legacy.c2005e2d.js"],(function(e,n){"use strict";var t,r,u;return{setters:[e=>{t=e._,r=e.b,u=e.a}],execute:function(){e("default",t({},[["render",function(e,n){return u(),r("div",null,"online")}]]))}}}));
