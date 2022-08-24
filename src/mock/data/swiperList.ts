@@ -25,4 +25,4 @@ export default [
     imgSrc:
       'https://i0.hdslb.com/bfs/archive/28d93d03968baa475a2c3982640736a66b4405c3.jpg@480w_300h.webp',
   },
-];
+]

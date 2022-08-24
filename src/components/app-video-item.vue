@@ -21,15 +21,15 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'vue';
+import { PropType } from 'vue'
 
 interface IVideoItem {
-  id: number;
-  imgSrc: string;
-  desc: string;
-  playCount: string;
-  commentCount: string;
-  videoSrc: string;
+  id: number
+  imgSrc: string
+  desc: string
+  playCount: string
+  commentCount: string
+  videoSrc: string
 }
 
 // 🔔 父传子需要通过 defineProps 接收
@@ -40,7 +40,7 @@ defineProps({
     type: Object as PropType<IVideoItem>,
     required: true,
   },
-});
+})
 </script>
 
 <style lang="less" scoped>

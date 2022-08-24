@@ -75,4 +75,4 @@ export default [
     text: '相簿',
     id: '18',
   },
-];
+]

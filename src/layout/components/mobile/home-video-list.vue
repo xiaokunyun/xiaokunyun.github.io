@@ -5,28 +5,28 @@
 </template>
 
 <script setup lang="ts">
-import AppVideoItem from '@/components/app-video-item.vue';
-import { ref } from 'vue';
-import axios from 'axios';
+import AppVideoItem from '@/components/app-video-item.vue'
+import { ref } from 'vue'
+import axios from 'axios'
 
 interface IVideoItem {
-  id: number;
-  imgSrc: string;
-  desc: string;
-  playCount: string;
-  commentCount: string;
-  videoSrc: string;
+  id: number
+  imgSrc: string
+  desc: string
+  playCount: string
+  commentCount: string
+  videoSrc: string
 }
 
-const list = ref<IVideoItem[]>([]);
+const list = ref<IVideoItem[]>([])
 
 axios({
   method: 'post',
   url: '/videosList',
 }).then((res) => {
-  console.log('视频列表的数据', res.data.data);
-  list.value = res.data.data;
-});
+  console.log('视频列表的数据', res.data.data)
+  list.value = res.data.data
+})
 </script>
 
 <style lang="less">

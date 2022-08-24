@@ -1,4 +1,4 @@
-import api from './index';
+import api from './index'
 // 卡片列表
 // export const getCardList = (data?: object): postType => {
 //   return api.request('post', '/api/navList', { data });
@@ -13,5 +13,5 @@ export const navList = (data?: object) => {
     url: '/api/navList',
     method: 'post',
     data,
-  });
-};
+  })
+}

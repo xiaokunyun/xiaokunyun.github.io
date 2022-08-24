@@ -1,12 +1,15 @@
 <template>
   <div class="warp">
+    <Header class="fixed top-0 w-screen" />
     <Center class="center" />
     <div class="bg"></div>
     <div class="beian">版权所有 © 2022-至今 AKUN</div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from './components/herder.vue'
+</script>
 
 <style scoped lang="scss">
 @media screen and (max-width: 700px) {

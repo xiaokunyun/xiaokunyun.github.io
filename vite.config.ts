@@ -1,9 +1,9 @@
-import { defineConfig, UserConfigExport, ConfigEnv } from 'vite';
-import { fileURLToPath, URL } from 'url';
-import createVitePlugins from './build/vite/plugin';
-import path, { resolve } from 'path';
+import { defineConfig, UserConfigExport, ConfigEnv } from 'vite'
+import { fileURLToPath, URL } from 'url'
+import createVitePlugins from './build/vite/plugin'
+import path, { resolve } from 'path'
 function pathResolve(dir: string) {
-  return resolve(process.cwd(), '.', dir);
+  return resolve(process.cwd(), '.', dir)
 }
 // import vue from '@vitejs/plugin-vue';
 // import WindiCSS from 'vite-plugin-windicss';
@@ -11,7 +11,7 @@ function pathResolve(dir: string) {
 // import AutoImport from 'unplugin-auto-import/vite';
 // import Components from 'unplugin-vue-components/vite';
 // import { VantResolver, ArcoResolver } from 'unplugin-vue-components/resolvers';
-import alias from '@rollup/plugin-alias';
+import alias from '@rollup/plugin-alias'
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfigExport => {
   //
@@ -44,11 +44,11 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
     //   minify: 'terser',
     //   outDir: 'dist',
     // },
-  });
+  })
   // } else {
   //   // command === 'build'
   //   return {
   //     // build 独有配置
   //   };
   // }
-};
+}

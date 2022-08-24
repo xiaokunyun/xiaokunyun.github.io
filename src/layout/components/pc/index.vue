@@ -45,7 +45,7 @@
 
 <script setup lang="ts">
 // import Header from './Header.vue';
-const router = useRouter();
-console.log('router', router);
-const list = ref(router.getRoutes().filter((v) => v.meta.requiresAuth));
+const router = useRouter()
+console.log('router', router)
+const list = ref(router.getRoutes().filter((v) => v.meta.requiresAuth))
 </script>

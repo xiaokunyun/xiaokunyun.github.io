@@ -359,4 +359,4 @@ export default [
     commentCount: 1345,
     date: '12-15',
   },
-];
+]

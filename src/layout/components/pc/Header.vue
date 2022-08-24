@@ -18,8 +18,8 @@
 </template>
 
 <script setup lang="ts">
-const router = useRouter();
-const list = ref(router.getRoutes().filter((v) => v.meta.requiresAuth));
+const router = useRouter()
+const list = ref(router.getRoutes().filter((v) => v.meta.requiresAuth))
 </script>
 
 <style scoped lang="scss">

@@ -12,8 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import AppHeader from './app-header.vue';
-import HomeChannel from './home-channel.vue';
-import HomeSwipe from './home-swipe.vue';
-import HomeVideoList from './home-video-list.vue';
+import AppHeader from './app-header.vue'
+import HomeChannel from './home-channel.vue'
+import HomeSwipe from './home-swipe.vue'
+import HomeVideoList from './home-video-list.vue'
 </script>

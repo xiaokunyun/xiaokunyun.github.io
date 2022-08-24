@@ -1,5 +1,5 @@
-import { defineConfig } from 'windicss/helpers';
-import formsPlugin from 'windicss/plugin/forms';
+import { defineConfig } from 'windicss/helpers'
+import formsPlugin from 'windicss/plugin/forms'
 
 export default defineConfig({
   darkMode: 'class',
@@ -20,4 +20,4 @@ export default defineConfig({
     },
   },
   plugins: [formsPlugin],
-});
+})

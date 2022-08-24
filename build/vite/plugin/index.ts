@@ -1,11 +1,11 @@
-import vue from '@vitejs/plugin-vue';
-import WindiCSS from 'vite-plugin-windicss';
-import legacy from '@vitejs/plugin-legacy';
-import AutoImport from 'unplugin-auto-import/vite';
-import Components from 'unplugin-vue-components/vite';
-import { VantResolver, ArcoResolver } from 'unplugin-vue-components/resolvers';
-import alias from '@rollup/plugin-alias';
-import { viteMockServe } from 'vite-plugin-mock';
+import vue from '@vitejs/plugin-vue'
+import WindiCSS from 'vite-plugin-windicss'
+import legacy from '@vitejs/plugin-legacy'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { VantResolver, ArcoResolver } from 'unplugin-vue-components/resolvers'
+import alias from '@rollup/plugin-alias'
+import { viteMockServe } from 'vite-plugin-mock'
 
 // import { createMock } from './mock';
 export default function createVitePlugins() {
@@ -51,8 +51,8 @@ export default function createVitePlugins() {
       setupProdMockServer();
           `,
     }),
-  ];
+  ]
   // vitePlugins.push(createMock());
 
-  return vitePlugins;
+  return vitePlugins
 }

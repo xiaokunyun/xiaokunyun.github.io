@@ -239,4 +239,4 @@ export default [
     commentCount: '1216',
     videoSrc: '',
   },
-];
+]

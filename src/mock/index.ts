@@ -1,11 +1,11 @@
-import Mock from 'mockjs';
-import navList from './data/navList';
-import swiperList from './data/swiperList';
-import videosList from './data/videosList';
-import recommendList from './data/recommendList';
-import commentsList from './data/commentsList';
-import videoDetailList from './data/videoDetailList';
-import { MockMethod } from 'vite-plugin-mock';
+import Mock from 'mockjs'
+import navList from './data/navList'
+import swiperList from './data/swiperList'
+import videosList from './data/videosList'
+import recommendList from './data/recommendList'
+import commentsList from './data/commentsList'
+import videoDetailList from './data/videoDetailList'
+import { MockMethod } from 'vite-plugin-mock'
 export default [
   // {
   //   url: '/api/swiperList',
@@ -62,7 +62,7 @@ export default [
   //     res.end(`hello, ${reqbody}`);
   //   },
   // },
-] as MockMethod[];
+] as MockMethod[]
 // mock的配置
 // Mock.setup({
 //   // 随机延时50-1000毫秒

@@ -10,33 +10,33 @@
 </template>
 
 <script lang="ts" setup>
-import axios from 'axios';
-import { ref } from 'vue';
-import { useRoute } from 'vue-router';
-import AppHeader from '@/layout/components/mobile/app-header.vue';
-import VideoPlay from './components/video-play.vue';
-import VideoInfo from './components/video-info.vue';
-import VideoBottom from './components/video-bottom.vue';
+import axios from 'axios'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+import AppHeader from '@/layout/components/mobile/app-header.vue'
+import VideoPlay from './components/video-play.vue'
+import VideoInfo from './components/video-info.vue'
+import VideoBottom from './components/video-bottom.vue'
 
 // 🔔 ? 表示属性是可选的，可有可无
 export interface IVideoInfo {
-  author?: string;
-  authorIconSrc?: string;
-  commentCount?: number;
-  date?: string;
-  id?: string;
-  poster?: string;
-  playCount?: string;
-  likeCount?: string;
-  favCount?: string;
-  videoSrc?: string;
-  videoTitle?: string;
+  author?: string
+  authorIconSrc?: string
+  commentCount?: number
+  date?: string
+  id?: string
+  poster?: string
+  playCount?: string
+  likeCount?: string
+  favCount?: string
+  videoSrc?: string
+  videoTitle?: string
 }
 
 // 🔔 初始化空对象，空对象不需要指定键名称了
-const videoInfo = ref<IVideoInfo>({});
+const videoInfo = ref<IVideoInfo>({})
 // 获取路由对象
-const route = useRoute();
+const route = useRoute()
 
 axios({
   url: '/videoDetail',
@@ -44,9 +44,9 @@ axios({
   // 根据路由对象的 id 参数发送请求获取对应的视频详情
   params: { id: route.params.id },
 }).then(({ data }) => {
-  videoInfo.value = data.result;
-  console.log('视频详情数据', data.result);
-});
+  videoInfo.value = data.result
+  console.log('视频详情数据', data.result)
+})
 </script>
 
 <style lang="less" scoped>

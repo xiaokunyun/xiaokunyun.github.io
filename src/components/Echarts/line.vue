@@ -27,12 +27,12 @@
 // let chartDom = proxy.$refs["line"];
 // let myChart = echarts.init(chartDom);
 // option && myChart.setOption(option);
-import * as echarts from 'echarts';
-type EChartsOption = echarts.EChartsOption;
+import * as echarts from 'echarts'
+type EChartsOption = echarts.EChartsOption
 
-var chartDom = document.getElementById('line')!;
-var myChart = echarts.init(chartDom);
-var option: EChartsOption;
+var chartDom = document.getElementById('line')!
+var myChart = echarts.init(chartDom)
+var option: EChartsOption
 
 option = {
   xAxis: {
@@ -48,9 +48,9 @@ option = {
       type: 'line',
     },
   ],
-};
+}
 
-option && myChart.setOption(option);
+option && myChart.setOption(option)
 </script>
 
 <style scoped lang="scss"></style>

@@ -12,25 +12,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import axios from 'axios';
-import { Swipe, SwipeItem } from 'vant';
+import { ref } from 'vue'
+import axios from 'axios'
+import { Swipe, SwipeItem } from 'vant'
 interface ISwiper {
-  imgSrc: string;
-  link: string;
+  imgSrc: string
+  link: string
 }
 // ref 函数用于定义模板中使用的响应式数据，相当于 Vue2 的 data
-const list = ref<ISwiper[]>([]);
+const list = ref<ISwiper[]>([])
 axios({
   url: '/swiperList',
   method: 'post',
 }).then((res) => {
-  console.log('轮播图数据', res.data.data);
-  list.value = res.data.data;
-});
+  console.log('轮播图数据', res.data.data)
+  list.value = res.data.data
+})
 const handleChange = (value: any) => {
-  console.log(value);
-};
+  console.log(value)
+}
 </script>
 
 <style lang="less" scoped>

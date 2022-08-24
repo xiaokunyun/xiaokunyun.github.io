@@ -11,7 +11,6 @@ module.exports = {
     'plugin:prettier/recommended', // 新增，必须放在最后面
   ],
   parser: 'vue-eslint-parser',
-
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
@@ -21,8 +20,8 @@ module.exports = {
   rules: {
     // "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     // "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    semi: 'off', //["error", "always"]
-    quotes: 'off', // ["error", "double"],
+    // semi: 'off', //["error", "always"]
+    // quotes: 'off', // ["error", "double"],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['off'],
     '@typescript-eslint/no-non-null-assertion': 'off',

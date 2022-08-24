@@ -79,4 +79,4 @@ export default [
     commentCount: '2027',
     videoSrc: '',
   },
-];
+]

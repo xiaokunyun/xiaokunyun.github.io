@@ -11,26 +11,26 @@
   </div>
 </template>
 <script setup lang="ts">
-import axios from 'axios';
-import { ref } from 'vue';
+import axios from 'axios'
+import { ref } from 'vue'
 
 interface IComment {
-  id: string;
-  date: string;
-  content: string;
-  avatar: string;
-  username: string;
+  id: string
+  date: string
+  content: string
+  avatar: string
+  username: string
 }
 
-const list = ref<IComment[]>([]);
+const list = ref<IComment[]>([])
 
 axios({
   method: 'get',
   url: '/commentsList',
 }).then(({ data }) => {
-  console.log('评论数据', data.result);
-  list.value = data.result.items;
-});
+  console.log('评论数据', data.result)
+  list.value = data.result.items
+})
 </script>
 
 <style lang="less" scoped>

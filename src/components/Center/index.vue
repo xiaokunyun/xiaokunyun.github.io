@@ -33,15 +33,7 @@
 <style scoped lang="scss">
 @media screen and (max-width: 700px) {
   #center {
-    font-size: 24px;
-
-    // .navgation i {
-    //     margin: 6px;
-    // }
-
-    // .talk-method i {
-    //     font-size: 14px;
-    // }
+    font-size: 14px;
   }
 }
 
