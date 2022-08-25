@@ -1,0 +1,1 @@
+System.register(["./index-legacy.169cad8a.js"],(function(e,n){"use strict";var t,r,u;return{setters:[e=>{t=e._,r=e.c,u=e.o}],execute:function(){e("default",t({},[["render",function(e,n){return u(),r("div",null,"online")}]]))}}}));
