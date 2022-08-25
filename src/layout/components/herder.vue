@@ -1,7 +1,16 @@
 <template>
-  <div>
-    <div class="navgation flex align-center justify-center flex-wrap">
-      <i v-for="(item, index) in navgation" :key="index" :class="item.icon">
+  <div class="flex justify-center items-center w-3/4 h-20 text-xl">
+    <div class="w-1/3 flex align-center justify-center">
+      <LOGO />
+    </div>
+    <div class="w-2/3 navgation flex align-center justify-center flex-wrap">
+      <!-- <Border :text="" /> -->
+      <i
+        class="m-1 w-1/7"
+        v-for="(item, index) in navgation"
+        :key="index"
+        :class="item.icon"
+      >
         {{ item.name }}
       </i>
     </div>
@@ -9,6 +18,7 @@
 </template>
 
 <script setup lang="ts">
+import LOGO from './logo.vue'
 const navgation = ref([
   { name: ' 主页', icon: 'iconfont icon-wenzhangguanli', path: '/exhibit' },
   {
@@ -28,7 +38,7 @@ const navgation = ref([
 </script>
 
 <style scoped lang="scss">
-i {
+.i {
   margin: 0.2rem;
 }
 </style>

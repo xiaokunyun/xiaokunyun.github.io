@@ -8,7 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AppVideoItem: typeof import('./components/app-video-item.vue')['default']
-    Center: typeof import('./components/Center/index.vue')['default']
+    Border: typeof import('./components/border/index.vue')['default']
     Line: typeof import('./components/Echarts/line.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

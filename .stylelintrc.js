@@ -1,5 +1,5 @@
 module.exports = {
-  root: true,
+  // root: true,
   // "extends": [
   //   "stylelint-config-standard-scss",
   //   "stylelint-config-prettier-scss"]
