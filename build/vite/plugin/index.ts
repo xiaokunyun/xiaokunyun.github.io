@@ -6,7 +6,8 @@ import Components from 'unplugin-vue-components/vite'
 import { VantResolver, ArcoResolver } from 'unplugin-vue-components/resolvers'
 import alias from '@rollup/plugin-alias'
 import { viteMockServe } from 'vite-plugin-mock'
-
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import path from 'path'
 // import { createMock } from './mock';
 export default function createVitePlugins() {
   const vitePlugins = [
@@ -19,6 +20,12 @@ export default function createVitePlugins() {
       },
     }),
     legacy({ targets: ['defaults', 'not IE 11'] }),
+    createSvgIconsPlugin({
+      iconDirs: [path.resolve(process.cwd(), 'src/icons')],
+      symbolId: 'icon-[dir]-[name]',
+      // inject?: 'body-last' | 'body-first'
+      // customDomId: '__svg__icons__dom__',
+    }),
     AutoImport({
       include: [
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx

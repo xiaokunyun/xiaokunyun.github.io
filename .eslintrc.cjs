@@ -8,7 +8,7 @@ module.exports = {
     // 'eslint:recommended',
     'plugin:vue/vue3-essential',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended', // 新增，必须放在最后面
+    // 'plugin:prettier/recommended', // 新增，必须放在最后面
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {

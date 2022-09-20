@@ -3,8 +3,7 @@ import 'virtual:windi-devtools'
 import { createApp } from 'vue'
 import App from './App.vue'
 import '@/assets/font/iconfont.css'
-
-// import 'virtual:svg-icons-register'
+import 'virtual:svg-icons-register'
 const app = createApp(App)
 // import { useREM } from './util/flex'
 // // 设置 rem
@@ -23,10 +22,12 @@ import i18n from './locales/index'
 app.use(i18n)
 import ArcoVue from '@arco-design/web-vue'
 import '@arco-design/web-vue/dist/arco.css'
+import ArcoVueIcon from '@arco-design/web-vue/es/icon'
 app.use(ArcoVue)
-
+app.use(ArcoVueIcon)
 import router from './router'
 app.use(router)
-
+import pinia from './store'
+app.use(pinia)
 import './assets/style/index.scss'
 app.mount('#app')

@@ -1,15 +1,17 @@
 <template>
   <div class="warp">
-    <Header class="fixed top-0 w-screen" />
+    <Head class="fixed top-0 w-screen" />
     <Center class="center" />
-    <div class="bg"></div>
+    <div class="bg" :class="{bganimation:useStore().theme}"></div>
     <div class="beian">版权所有 © 2022-至今 AKUN</div>
   </div>
 </template>
 
 <script setup lang="ts">
-import Header from './components/herder.vue'
+import Head from './components/head.vue'
 import Center from './components/center.vue'
+import { useStore } from '@/store/user'
+
 </script>
 
 <style scoped lang="scss">
@@ -38,7 +40,10 @@ import Center from './components/center.vue'
   .bg {
     width: 100%;
     height: 100vh;
-    animation: change 15s infinite;
+    z-index: -99;
+  }
+.bganimation{
+  animation: change 15s infinite;
     background: linear-gradient(
       125deg,
       #2980b9,
@@ -48,9 +53,7 @@ import Center from './components/center.vue'
       #27ae60
     );
     background-size: 800%;
-    z-index: -99;
-  }
-
+}
   @keyframes change {
     0% {
       background-position-x: 0%;
