@@ -10,17 +10,17 @@
       </i>
     </div>
     <div class="w-1/4 flex align-center justify-center">
-      <div @click="themeChange(false)">
+      <div @click="themeChangel(false)">
         <icon-sun v-show="useStore().theme == true" />
       </div>
-      <div @click="themeChange(true)">
+      <div @click="themeChangel(true)">
         <icon-moon v-show="useStore().theme == false" />
       </div>
-      <div>
-        <icon-chinese-fill />
+      <div @click="useStore().localesChange('en')">
+        <icon-chinese-fill v-show="useStore().locales == 'zh'" />
       </div>
-      <div>
-        <icon-english-fill />
+      <div @click="useStore().localesChange('zh')">
+        <icon-english-fill v-show="useStore().locales == 'en'"/>
       </div>
     </div>
   </div>
@@ -45,7 +45,10 @@ const navgation = ref([
     path: 'https://github.com/qiheizhiya/myBlog',
   },
 ])
-const themeChange = (val: boolean) => {
+// onMounted(()=>{
+//   themeChangel()
+// })
+const themeChangel = (val: boolean) => {//主题切换
   useStore().themeChange(val)
   let body = document.body
   body.className = useStore().theme == true ? '' : 'dark'

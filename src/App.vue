@@ -1,23 +1,10 @@
-<script setup lang="ts"></script>
-
+<script setup lang="ts">
+import en from '@arco-design/web-vue/es/locale/lang/en-us';
+import zh from '@arco-design/web-vue/es/locale/lang/zh-CN';
+import { useStore } from '@/store/user'
+</script>
 <template>
-  <div class="warpsfixed h-screen w-screen top-0 left-0">
-    <RouterView />
-  </div>
+  <a-config-provider :locale="useStore().locales=='zh'?zh:en">
+      <RouterView />
+  </a-config-provider>
 </template>
-
-<style scoped lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.warps {
-  background-image: radial-gradient(
-    circle,
-    LightPink,
-    LightSkyBlue,
-    DarkTurquoise
-  );
-}
-</style>

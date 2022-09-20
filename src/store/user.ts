@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
 export const useStore = defineStore('main', {
-  // other options...
   state: () => ({
     count: 0,
-    theme: true,
+    theme: false,//主题切换  true ：亮色， false : 暗色
+    locales: 'zh',//语言切换 true ：亮色， false : 暗色
   }),
   actions: {
     increment() {
@@ -11,6 +11,9 @@ export const useStore = defineStore('main', {
     },
     themeChange(value: boolean) {
       this.theme = value
+    },
+    localesChange(value: string) {
+      this.locales = value
     },
   },
 })

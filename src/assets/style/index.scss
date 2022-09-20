@@ -1,15 +1,10 @@
-html {
-  overflow: hidden;
-  text-size-adjust: 100%;
-}
-
 html,
 body {
   width: 100%;
   height: 100%;
   overflow: visible;
   overflow-x: hidden;
-
+  text-size-adjust: 100%;
   &.color-weak {
     filter: invert(80%);
   }
@@ -21,6 +16,7 @@ body {
 }
 .dark{
   background-color: #17171A;
+  color: #fff;
 }
 a:focus,
 a:active,
