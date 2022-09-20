@@ -9,11 +9,12 @@
 
 <script setup lang="ts">
 import Header from './components/herder.vue'
+import Center from './components/center.vue'
 </script>
 
 <style scoped lang="scss">
 @media screen and (max-width: 700px) {
-  .beian {
+  .warp {
     font-size: 14px !important;
   }
 }
@@ -74,6 +75,29 @@ import Header from './components/herder.vue'
     letter-spacing: 2px;
     font-size: 16px;
     white-space: nowrap;
+    animation: cloor 15s infinite;
+  }
+
+  @keyframes cloor {
+    0% {
+      color: #2980b9;
+    }
+
+    25% {
+      color: #633bd3;
+    }
+
+    50% {
+      color: #8e44ad;
+    }
+
+    75% {
+      color: #192f44;
+    }
+
+    100% {
+      color: #27ae60;
+    }
   }
 }
 </style>

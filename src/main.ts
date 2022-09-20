@@ -2,6 +2,8 @@ import 'virtual:windi.css'
 import 'virtual:windi-devtools'
 import { createApp } from 'vue'
 import App from './App.vue'
+import '@/assets/font/iconfont.css'
+
 // import 'virtual:svg-icons-register'
 const app = createApp(App)
 // import { useREM } from './util/flex'
