@@ -19,7 +19,7 @@ const app = createApp(App)
 // app.use(Swipe);
 // app.use(SwipeItem);
 // import "@/mock/index";
-import i18n from '../locales/index'
+import i18n from './locales/index'
 app.use(i18n)
 import ArcoVue from '@arco-design/web-vue'
 import '@arco-design/web-vue/dist/arco.css'
