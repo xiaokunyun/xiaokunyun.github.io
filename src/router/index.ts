@@ -40,7 +40,7 @@ export const routerList: RouteRecordRaw[] = [
 ]
 export const mobileRoutes: Array<RouteRecordRaw> = [
   { path: '/', component: () => import('@/layout/index.vue') },
-  { path: '/video/:id', component: () => import('@/views/Video/index.vue') },
+  // { path: '/video/:id', component: () => import('@/views/Video/index.vue') },
 ]
 const router = createRouter({
   history: createWebHistory(),
