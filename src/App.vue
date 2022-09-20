@@ -5,6 +5,6 @@ import { useStore } from '@/store/user'
 </script>
 <template>
   <a-config-provider :locale="useStore().locales=='zh'?zh:en">
-      <RouterView />
+    <RouterView />
   </a-config-provider>
 </template>
