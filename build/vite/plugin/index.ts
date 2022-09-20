@@ -38,7 +38,7 @@ export default function createVitePlugins() {
     Components({
       resolvers: [VantResolver(), ArcoResolver()],
       dirs: ['src/components'],
-      dts: 'src/components.d.ts', //false, //
+      dts: false, //, //
     }),
     // mock支持
     viteMockServe({
