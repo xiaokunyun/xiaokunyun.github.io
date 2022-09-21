@@ -6,7 +6,7 @@ console.log("useStore().locales",useStore().locales);
 
 </script>
 <template>
-  <a-config-provider :locale="useStore().language">
+  <a-config-provider :locale="zh">
     <RouterView />
   </a-config-provider>
 </template>
