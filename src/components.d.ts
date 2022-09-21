@@ -16,6 +16,7 @@ declare module '@vue/runtime-core' {
     Border: typeof import('./components/border/index.vue')['default']
     copy: typeof import('./components/Echarts/index copy.vue')['default']
     Echarts: typeof import('./components/Echarts/index.vue')['default']
+    'Index copy': typeof import('./components/Echarts/index copy.vue')['default']
     Line: typeof import('./components/Echarts/line.vue')['default']
     Logo: typeof import('./components/Logo/logo.vue')['default']
     Longjie: typeof import('./components/Longjie/index.vue')['default']

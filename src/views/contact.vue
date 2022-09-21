@@ -2,8 +2,8 @@
   <div>
     <div class="flex justify-center items-center w-9/10">
       <!-- <div > -->
-      <a-statistic class="w-1/4 flex justify-center items-center w-screen" v-for="(item,index) in DataList"
-        :key="index" :title="item.title" :value="50.52" :precision="2" :value-from="0" :start="true" animation>
+      <a-statistic class="w-1/4 flex justify-center items-center w-screen" v-for="(item,index) in DataList" :key="index"
+        :title="item.title" :value="50.52" :precision="2" :value-from="0" :start="true" animation>
         <template #prefix>
           <icon-arrow-rise />
         </template>
@@ -11,12 +11,16 @@
       </a-statistic>
       <!-- </div> -->
     </div>
+    <p>{{ $t('hello') }}</p>
+    <p>{{ t('hello') }}</p>
     <Line />
     <!-- :title-data-props="DataList" -->
   </div>
 </template>
 <script setup lang="ts">
 import { isMobileTerminal } from '@/util/flex'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n() // use as global scope
 const DataList = ref([
   {
     title: '概况数据',

@@ -17,11 +17,20 @@
       <div @click="themeChangel(true)">
         <icon-moon v-show="useStore().theme == false" />
       </div>
-      <div @click="useStore().localesChange('en')">
+      <div @click="localesChange1('en')">
         <icon-chinese-fill v-show="useStore().locales == 'zh'" />
       </div>
-      <div @click="useStore().localesChange('zh')">
+      <div @click="localesChange1('zh')">
         <icon-english-fill v-show="useStore().locales == 'en'" />
+      </div>
+      <div class="locale-changer">
+        <select v-model="$i18n.locale">
+          <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
+            {{ locale }}
+            <!-- <icon-chinese-fill  v-show="locale=='zh'"/>
+            <icon-english-fill v-show="locale=='en'"/> -->
+          </option>
+        </select>
       </div>
     </div>
   </div>
@@ -31,23 +40,8 @@
 import { useStore } from '@/store/user'
 import { RouteRecordRaw } from 'vue-router'
 import { isMobileTerminal } from '@/util/flex'
+import { useI18n } from 'vue-i18n'
 const router = useRouter()
-// const navgation = ref([
-//   { name: ' 主页', icon: 'iconfont icon-wenzhangguanli', path: '/exhibit' },
-//   {
-//     name: ' 文章列表',
-//     icon: 'iconfont icon-wenzhangguanli',
-//     path: '/articleList',
-//   },
-//   // { name: ' 听雨', icon: 'iconfont icon-xiangce', path: '/Rainy' },
-//   // { name: ' 关于我', icon: 'iconfont icon-liuyanban', path: '/self' },
-//   // { name: ' 留言版', icon: 'iconfont icon-liuyanban', path: '/message' },
-//   {
-//     name: ' Github',
-//     icon: 'iconfont icon-GitHub',
-//     path: 'https://github.com/qiheizhiya/myBlog',
-//   },
-// ])
 onMounted(() => {
   console.log("router.getRoutes().filter(v=>v.meta.requiresAuth)", router.getRoutes().filter(v => v.meta.requiresAuth));
 })
@@ -64,13 +58,19 @@ const themeChangel = (val: boolean) => {//主题切换
     // 设置为暗黑主题
     document.body.setAttribute('arco-theme', 'dark')
   }
-
+}
+const localesChange1 = (val: string) => {//语言切换
+  useStore().localesChange(val)
+  console.log("useStore().locales", useStore().locales);
+  // useI18n.global.locale.value = val
+  // $i18n.locale= val
 }
 </script>
 
 <style scoped lang="scss">
 .active {
   font-size: 16px;
+
   .alink {
     width: 50px;
   }
