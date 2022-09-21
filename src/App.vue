@@ -15,7 +15,7 @@ const locale = computed(() => {
 });
 </script>
 <template>
-  <a-config-provider :locale="zhCN">
+  <a-config-provider :locale="locale">
     <RouterView />
   </a-config-provider>
 </template>
