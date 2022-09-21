@@ -91,10 +91,10 @@ const { t } = useI18n()
       LightPink,
       LightSkyBlue,
       DarkTurquoise,
-      #633bd3,
-      #192f44,
+      #27ae60,
+      #2980b9,
     );
-  //  #2980b9, #27ae60,#8e44ad,
+    // #192f44,#8e44ad,#633bd3,
   background-size: 800%;
 }
 
