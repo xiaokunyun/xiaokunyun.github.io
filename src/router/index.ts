@@ -8,7 +8,7 @@ declare module 'vue-router' {
     isAdmin?: boolean
     // 每个路由都必须声明
     requiresAuth: boolean
-    title:string
+    title: string
   }
 }
 export const routerList: RouteRecordRaw[] = [
@@ -28,21 +28,12 @@ export const routerList: RouteRecordRaw[] = [
         },
       },
       {
-        path: '/about',
-        name: 'about',
-        component: () => import('@/views/about.vue'),
-        meta: {
-          requiresAuth: true,
-          title: '关于',
-        },
-      },
-      {
         path: '/contact',
         name: 'contact',
         component: () => import('@/views/contact.vue'),
         meta: {
           requiresAuth: true,
-          title: '联系',
+          title: '统计',
         },
       },
       {
@@ -54,20 +45,20 @@ export const routerList: RouteRecordRaw[] = [
           title: '在线',
         },
       },
+      {
+        path: '/about',
+        name: 'about',
+        component: () => import('@/views/about.vue'),
+        meta: {
+          requiresAuth: true,
+          title: '关于',
+        },
+      },
     ]
-    // meta: {
-    //   requiresAuth: true,
-    //   title: '主页',
-    // },
   },
-  
 ]
-// export const mobileRoutes: Array<RouteRecordRaw> = [
-//   { path: '/', component: () => import('@/layout/index.vue') },
-//   // { path: '/video/:id', component: () => import('@/views/Video/index.vue') },
-// ]
 const router = createRouter({
   history: createWebHistory(),
-  routes:  routerList,//isMobileTerminal.value ? mobileRoutes :
+  routes: routerList,//isMobileTerminal.value ? mobileRoutes :
 })
 export default router

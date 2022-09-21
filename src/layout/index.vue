@@ -1,9 +1,7 @@
 <template>
   <div class="warp" :class="{bganimation:useStore().theme}">
-
     <Head class="fixed top-0 w-screen" />
     <div class="w-screen h-screen mt-20">
-      <!-- <router-view/> -->
       <router-view v-slot="{ Component, route }">
         <transition name="route.meta.transition || 'fade'" mode="out-in">
           <keep-alive>

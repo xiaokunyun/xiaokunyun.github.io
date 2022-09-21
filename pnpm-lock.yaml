@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@arco-design/web-vue': ^2.33.1
+  '@arco-design/web-vue': ^2.37.1
   '@rollup/plugin-alias': ^3.1.9
   '@types/mockjs': ^1.0.4
   '@types/node': ^18.0.6
@@ -50,7 +50,7 @@ dependencies:
   vue-router: 4.1.4_vue@3.2.37
 
 devDependencies:
-  '@arco-design/web-vue': 2.35.1_vue@3.2.37
+  '@arco-design/web-vue': 2.37.1_vue@3.2.37
   '@types/mockjs': 1.0.6
   '@types/node': 18.7.11
   '@typescript-eslint/eslint-plugin': 5.34.0_euudt5oqhhodkyae5tf6wjmsda
@@ -86,8 +86,8 @@ packages:
       color: 3.2.1
     dev: true
 
-  /@arco-design/web-vue/2.35.1_vue@3.2.37:
-    resolution: {integrity: sha512-aL49HAshYMkfM+GKy21KrjPfyc4bVdUdh9fsomDP2uhpkx4kjTQu6slvDkJZidp55w+gUWzap4btqofCLQ6C0w==}
+  /@arco-design/web-vue/2.37.1_vue@3.2.37:
+    resolution: {integrity: sha512-lRilS1pEBvf8oa1tja4354FRY/GhTSEE+VycVxjA0DLdAj5f4gTBdK1poaDgTXABxMhp/LwUvXlhb6aRvKdVnw==}
     peerDependencies:
       vue: ^3.1.0
     dependencies:

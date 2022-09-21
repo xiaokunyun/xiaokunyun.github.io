@@ -7,10 +7,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AButton: typeof import('@arco-design/web-vue')['Button']
     ACarousel: typeof import('@arco-design/web-vue')['Carousel']
     ACarouselItem: typeof import('@arco-design/web-vue')['CarouselItem']
     AConfigProvider: typeof import('@arco-design/web-vue')['ConfigProvider']
     AppVideoItem: typeof import('./components/app-video-item.vue')['default']
+    AStatistic: typeof import('@arco-design/web-vue')['Statistic']
     Border: typeof import('./components/border/index.vue')['default']
     Line: typeof import('./components/Echarts/line.vue')['default']
     Logo: typeof import('./components/Logo/logo.vue')['default']
