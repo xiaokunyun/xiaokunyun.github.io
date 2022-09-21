@@ -4,53 +4,43 @@
   </div>
 </template>
 <script setup lang="ts">
-// import * as echarts from "echarts";
-// // import { getCurrentInstance } from "vue";
-// type EChartsOption = echarts.EChartsOption;
-// const proxy: any = getCurrentInstance();
-// let option: EChartsOption;
-// option = {
-//   xAxis: {
-//     type: "category",
-//     data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-//   },
-//   yAxis: {
-//     type: "value",
-//   },
-//   series: [
-//     {
-//       data: [150, 230, 224, 218, 135, 147, 260],
-//       type: "line",
-//     },
-//   ],
-// };
-// let chartDom = proxy.$refs["line"];
-// let myChart = echarts.init(chartDom);
-// option && myChart.setOption(option);
-import * as echarts from 'echarts'
+// import * as echarts from 'echarts'
+// type EChartsOption = echarts.EChartsOption
+// // const { proxy } = getCurrentInstance()
+// // 绘制canvas
+// const echartsPrint = () => {
+//     // let chartDom = proxy.$refs['line']
+//     let chartDom = document.getElementById('line')
+//     let myChart = echarts.init(chartDom)
+//     option.value && myChart && myChart.setOption(option.value)
+// }
+
+import * as echarts from 'echarts';
+
 type EChartsOption = echarts.EChartsOption
 
-var chartDom = document.getElementById('line')!
-var myChart = echarts.init(chartDom)
-var option: EChartsOption
+var chartDom = document.getElementById('line')!;
+var myChart = echarts.init(chartDom);
+var option: EChartsOption;
 
 option = {
   xAxis: {
     type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
   },
   yAxis: {
-    type: 'value',
+    type: 'value'
   },
   series: [
     {
       data: [150, 230, 224, 218, 135, 147, 260],
-      type: 'line',
-    },
-  ],
-}
+      type: 'line'
+    }
+  ]
+};
 
-option && myChart.setOption(option)
+option && myChart.setOption(option);
+
 </script>
 
 <style scoped lang="scss"></style>

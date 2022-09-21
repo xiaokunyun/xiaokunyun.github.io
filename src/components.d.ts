@@ -14,11 +14,14 @@ declare module '@vue/runtime-core' {
     AppVideoItem: typeof import('./components/app-video-item.vue')['default']
     AStatistic: typeof import('@arco-design/web-vue')['Statistic']
     Border: typeof import('./components/border/index.vue')['default']
+    copy: typeof import('./components/Echarts/index copy.vue')['default']
+    Echarts: typeof import('./components/Echarts/index.vue')['default']
     Line: typeof import('./components/Echarts/line.vue')['default']
     Logo: typeof import('./components/Logo/logo.vue')['default']
     Longjie: typeof import('./components/Longjie/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./components/SvgIcon/index.vue')['default']
+    Testttt: typeof import('./components/Echarts/testttt.vue')['default']
   }
 }

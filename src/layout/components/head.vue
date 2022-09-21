@@ -9,7 +9,6 @@
           {{item.meta.title}}
         </RouterLink>
       </div>
-
     </div>
     <div class="w-1/4 flex align-center justify-center">
       <div @click="themeChangel(false)">
@@ -72,7 +71,6 @@ const themeChangel = (val: boolean) => {//主题切换
 <style scoped lang="scss">
 .active {
   font-size: 16px;
-
   .alink {
     width: 50px;
   }

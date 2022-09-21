@@ -1,26 +1,22 @@
 <template>
   <div>
-    contact
-    <div class="flex justify-center items-center">
-      <div class="w-1/4 m-4" v-for="(item,index) in DataList" :key="index">
-        <div class="p1"> {{ item.title }}</div>
-        <div class="p1">
-          <a-statistic :title="item.title" :value="50.52" :precision="2" :value-from="0" :start="start" animation>
-            <template #prefix>
-              <icon-arrow-rise />
-            </template>
-            <template #suffix>%</template>
-          </a-statistic>
-          <a-button @click="start=true">Start</a-button>
-          {{ item.number }}
-        </div>
-      </div>
+    <div class="flex justify-center items-center w-9/10">
+      <!-- <div > -->
+      <a-statistic class="w-1/4 flex justify-center items-center w-screen" v-for="(item,index) in DataList"
+        :key="index" :title="item.title" :value="50.52" :precision="2" :value-from="0" :start="true" animation>
+        <template #prefix>
+          <icon-arrow-rise />
+        </template>
+        <!-- <template #suffix>%</template> -->
+      </a-statistic>
+      <!-- </div> -->
     </div>
-    <Line :title-data-props="DataList" />
+    <Line />
+    <!-- :title-data-props="DataList" -->
   </div>
 </template>
 <script setup lang="ts">
-    const start = ref(false);
+import { isMobileTerminal } from '@/util/flex'
 const DataList = ref([
   {
     title: '概况数据',
