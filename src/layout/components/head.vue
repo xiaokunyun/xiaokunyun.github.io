@@ -74,10 +74,11 @@ const themeChangel = (val: boolean) => {//主题切换
   width: 100px;
   border: 10px;
 }
-.alink:hover{
-  border: 1px solid #333;
-}
-.alinktive:hover{
-  border: 1px solid #fff;
-}
+// .alink:hover{
+//   border: 1px solid #333;
+// }
+// .alinktive:hover{
+//   border: 1px solid #fff;
+//   width: 50px;
+// }
 </style>
