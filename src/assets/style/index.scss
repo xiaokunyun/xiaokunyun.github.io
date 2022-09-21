@@ -17,6 +17,14 @@ body {
 .dark{
   background-color: #17171A;
   color: #fff;
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+}
+a{
+  text-decoration: none;
+  color: #333;
 }
 a:focus,
 a:active,

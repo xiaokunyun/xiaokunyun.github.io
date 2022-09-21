@@ -2,9 +2,11 @@
 import en from '@arco-design/web-vue/es/locale/lang/en-us';
 import zh from '@arco-design/web-vue/es/locale/lang/zh-CN';
 import { useStore } from '@/store/user'
+console.log("useStore().locales",useStore().locales);
+
 </script>
 <template>
-  <a-config-provider :locale="useStore().locales=='zh'?zh:en">
+  <a-config-provider :locale="useStore().language">
     <RouterView />
   </a-config-provider>
 </template>
