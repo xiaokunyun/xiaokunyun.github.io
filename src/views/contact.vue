@@ -1,8 +1,7 @@
 <template>
-  <div>
+  <div class="relative w-screen h-screen">
     <div class="flex justify-center items-center w-9/10">
-      <!-- <div > -->
-      <a-statistic class="w-1/4 flex justify-center items-center w-screen" v-for="(item,index) in DataList" :key="index"
+      <a-statistic class="flex justify-center items-center w-1/4 " v-for="(item,index) in DataList" :key="index"
         :title="item.title" :value="50.52" :precision="2" :value-from="0" :start="true" animation>
         <template #prefix>
           <icon-arrow-rise />
