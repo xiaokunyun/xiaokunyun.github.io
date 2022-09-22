@@ -1,17 +1,8 @@
 import { createI18n } from 'vue-i18n'
 import { useStore } from "@/store/user";
-import { computed } from 'vue'
+import zhList from './lang/zh'
+import enList from './lang/en'
 import pinia from '@/store'
-// const locale = computed(() => {
-//   switch (useStore(pinia).locales) {
-//     case 'zh':
-//       return zhCN;
-//     case 'en':
-//       return enUS;
-//     default:
-//       return zhCN;
-//   }
-// });
 function language() {
   return useStore(pinia).locales
 }
@@ -22,10 +13,12 @@ const i18n = createI18n({
   globalInjection: true,// 全局注入 $t 函数
   messages: {
     en: {
-      hello: 'hello!'
+      hello: 'hello!',
+        ...enList
     },
     zh: {
-      hello: '你好'
+      hello: '你好',
+        ...zhList
     }
   }
 })

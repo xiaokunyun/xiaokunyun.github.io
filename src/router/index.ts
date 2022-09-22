@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import { isMobileTerminal } from '@/util/flex'
 import 'vue-router'
-
+import { useStore } from '@/store/user'
+import pinia from '@/store'
 declare module 'vue-router' {
   interface RouteMeta {
     // 是可选的
@@ -12,6 +13,12 @@ declare module 'vue-router' {
   }
 }
 export const routerList: RouteRecordRaw[] = [
+  {
+    path: '/login',
+    name: 'login',
+    component: () =>
+      import(/* webpackChunkName: "login" */ '@/views/login/index.vue')
+  },
   {
     path: '/',
     component: () => import('@/layout/index.vue'),
@@ -60,4 +67,10 @@ const router = createRouter({
   history: createWebHistory(),
   routes: routerList,//isMobileTerminal.value ? mobileRoutes :
 })
+// const isAuthenticated=useStore(pinia).isAuthenticated
+// console.log("isAuthenticated",isAuthenticated);
+// router.beforeEach(async(to, from,next) => {
+//   if (to.name !== 'login' && !useStore(pinia).isAuthenticated) next({ name: 'login' })
+//   else next()
+// })
 export default router

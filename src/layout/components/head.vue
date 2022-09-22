@@ -10,7 +10,7 @@
         </RouterLink>
       </div>
     </div>
-    <div class="w-1/4 flex align-center justify-center">
+    <div class="w-1/4 flex align-center justify-center" :class="{svgactive:isMobileTerminal}">
       <div @click="themeChangel(false)">
         <icon-sun v-show="useStore().theme == true" />
       </div>
@@ -23,13 +23,6 @@
       <div @click="localesChange1('zh')">
         <icon-english-fill v-show="useStore().locales == 'en'" />
       </div>
-      <!-- <div class="locale-changer">
-        <select v-model="$i18n.locale">
-          <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
-            {{ locale }}
-          </option>
-        </select>
-      </div> -->
     </div>
   </div>
 </template>
@@ -39,7 +32,7 @@ import { useStore } from '@/store/user'
 import { RouteRecordRaw } from 'vue-router'
 import { isMobileTerminal } from '@/util/flex'
 import { useI18n } from 'vue-i18n'
-const i18n=useI18n()
+const i18n = useI18n()
 const router = useRouter()
 onMounted(() => {
   console.log("router.getRoutes().filter(v=>v.meta.requiresAuth)", router.getRoutes().filter(v => v.meta.requiresAuth));
@@ -72,6 +65,16 @@ const localesChange1 = (val: string) => {//语言切换
   .alink {
     width: 50px;
   }
+}
+
+.svgactive {
+  svg {
+    font-size: 20px;
+  }
+}
+
+svg {
+  font-size: 26px;
 }
 
 .alink {

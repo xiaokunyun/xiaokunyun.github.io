@@ -5,6 +5,7 @@ export const useStore = defineStore('main', {
     theme: true,//主题切换  true ：亮色， false : 暗色
     locales: 'zh',//语言切换 'zh' ：中文， 'en' : 英文
     // language:zh,
+    isAuthenticated:false,//登录状态确认
   }),
   actions: {
     increment() {
@@ -15,11 +16,9 @@ export const useStore = defineStore('main', {
     },
     localesChange(value: string) {
       this.locales = value
-      // if (value=='zh') {
-      //   this.language = zh
-      // } else {
-      //   this.language = en
-      // }
+    },
+    isAuthenticatedChange(val:boolean){
+      this.isAuthenticated = val
     },
   },
 })
