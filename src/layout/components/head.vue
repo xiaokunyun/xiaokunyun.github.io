@@ -23,15 +23,13 @@
       <div @click="localesChange1('zh')">
         <icon-english-fill v-show="useStore().locales == 'en'" />
       </div>
-      <div class="locale-changer">
+      <!-- <div class="locale-changer">
         <select v-model="$i18n.locale">
           <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
             {{ locale }}
-            <!-- <icon-chinese-fill  v-show="locale=='zh'"/>
-            <icon-english-fill v-show="locale=='en'"/> -->
           </option>
         </select>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -41,6 +39,7 @@ import { useStore } from '@/store/user'
 import { RouteRecordRaw } from 'vue-router'
 import { isMobileTerminal } from '@/util/flex'
 import { useI18n } from 'vue-i18n'
+const i18n=useI18n()
 const router = useRouter()
 onMounted(() => {
   console.log("router.getRoutes().filter(v=>v.meta.requiresAuth)", router.getRoutes().filter(v => v.meta.requiresAuth));
@@ -62,8 +61,7 @@ const themeChangel = (val: boolean) => {//主题切换
 const localesChange1 = (val: string) => {//语言切换
   useStore().localesChange(val)
   console.log("useStore().locales", useStore().locales);
-  // useI18n.global.locale.value = val
-  // $i18n.locale= val
+  i18n.locale.value = val
 }
 </script>
 
