@@ -85,14 +85,15 @@ const i18n = useI18n()
 const { t } = useI18n() // use as global scope
 const router = useRouter();
 const userInfo = reactive({
-  username: 'admin', // 演示默认值
-  password: 'admin', // demo default value
+  username: 'super-admin',//'admin', // 演示默认值
+  password:'123456',// 'admin', // demo default value
 })
 // const isAuthenticated=ref(useStore().isAuthenticated)
 const handleSubmit = () => {
   // console.log('values:', values, '\nerrors:', errors)
-  useStore().isAuthenticatedChange(true)
+  // useStore().isAuthenticatedChange(true)
   console.log("isAuthenticated", useStore().isAuthenticated);
+  useStore().login('user/login', userInfo)
   router.push({
     path: '/',
   });

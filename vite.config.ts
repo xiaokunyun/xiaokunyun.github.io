@@ -25,7 +25,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
         '@': path.resolve(__dirname, './src'),
       },
     },
-    server: {
+    server: { // 配置反向代理
       // https: true,
       // Listening on all local IPs
       host: true,
@@ -34,9 +34,10 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
       // Load proxy configuration from .env
       proxy: {
         '/api': {
-          target: 'http://localhost:3251',
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ''),
+          // target: 'http://localhost:3251',
+          target: 'https://api.imooc-admin.lgdsunday.club/',// 要代理的服务器地址
+          changeOrigin: true,// 是否跨域
+          // rewrite: (path) => path.replace(/^\/api/, ''),
         },
       },
     },

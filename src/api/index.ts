@@ -1,7 +1,8 @@
 import axios from 'axios'
 //创建一个实例
 const api = axios.create({
-  baseURL: 'http://localhost:3251',
+  // baseURL: 'http://localhost:3251',
+  baseURL: import.meta.env.VUE_APP_BASE_API,
   // baseURL: import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true' ? '/proxy/' : import.meta.env.VITE_APP_API_BASEURL,
   timeout: 5000,
   // headers: { 'X-Custom-Header': 'foobar' },

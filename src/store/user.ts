@@ -1,4 +1,10 @@
 import { defineStore } from 'pinia'
+import { login } from '@/api/user'
+// import md5 from 'md5'
+export interface LoginData {
+  username: string;
+  password: string;
+}
 export const useStore = defineStore('main', {
   state: () => ({
     count: 0,
@@ -20,5 +26,20 @@ export const useStore = defineStore('main', {
     isAuthenticatedChange(val:boolean){
       this.isAuthenticated = val
     },
+    login(context:any, userInfo:LoginData) {
+      const { username, password } = userInfo
+      return new Promise<void>((resolve, reject) => {
+        login({
+          username,
+          password,//: md5(password)
+        })
+          .then(data => {
+            resolve()
+          })
+          .catch(err => {
+            reject(err)
+          })
+      })
+    }
   },
 })
