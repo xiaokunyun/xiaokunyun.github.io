@@ -15,11 +15,11 @@ export const routerList: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('@/layout/index.vue'),
-    redirect: '/dashboard',
+    redirect: '/index',
     children: [
       {
-        path: '/dashboard',
-        name: 'dashboard',
+        path: 'index',
+        name: 'index',
         component: () => import('@/views/index.vue'),
         meta: {
           requiresAuth: true,
@@ -27,7 +27,7 @@ export const routerList: RouteRecordRaw[] = [
         },
       },
       {
-        path: '/contact',
+        path: 'contact',
         name: 'contact',
         component: () => import('@/views/contact.vue'),
         meta: {
@@ -36,7 +36,7 @@ export const routerList: RouteRecordRaw[] = [
         },
       },
       {
-        path: '/online',
+        path: 'online',
         name: 'online',
         component: () => import('@/views/online.vue'),
         meta: {
@@ -45,7 +45,7 @@ export const routerList: RouteRecordRaw[] = [
         },
       },
       {
-        path: '/about',
+        path: 'about',
         name: 'about',
         component: () => import('@/views/about.vue'),
         meta: {
