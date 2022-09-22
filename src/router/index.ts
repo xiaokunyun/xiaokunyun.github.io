@@ -14,7 +14,6 @@ declare module 'vue-router' {
 export const routerList: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'index',
     component: () => import('@/layout/index.vue'),
     redirect: '/dashboard',
     children: [
