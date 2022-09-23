@@ -19,6 +19,7 @@ declare module '@vue/runtime-core' {
     ASpace: typeof import('@arco-design/web-vue')['Space']
     AStatistic: typeof import('@arco-design/web-vue')['Statistic']
     Border: typeof import('./components/border/index.vue')['default']
+    copy: typeof import('./components/Echarts/index copy.vue')['default']
     Echarts: typeof import('./components/Echarts/index.vue')['default']
     'Index copy': typeof import('./components/Echarts/index copy.vue')['default']
     Line: typeof import('./components/Echarts/line.vue')['default']

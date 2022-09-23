@@ -6,7 +6,10 @@
     <div class="w-2/4 flex align-center justify-center flex-wrap" :class="{active:isMobileTerminal}">
       <div class="w-1/4" v-for="(item, index) in router.getRoutes().filter(v=>v.meta.requiresAuth)" :key="index">
         <RouterLink class="alink" :class="{alinktive:useStore().theme}" :to="item.path">
-          {{item.meta.title}}
+          <div v-show="item.meta.title=='主页'">{{$t('home')}}</div>
+          <div v-show="item.meta.title=='统计'">{{$t('Statistics')}}</div>
+          <div v-show="item.meta.title=='在线'">{{$t('online')}}</div>
+          <div v-show="item.meta.title=='关于'">{{$t('about')}}</div>
         </RouterLink>
       </div>
     </div>
@@ -33,6 +36,7 @@ import { RouteRecordRaw } from 'vue-router'
 import { isMobileTerminal } from '@/util/flex'
 import { useI18n } from 'vue-i18n'
 const i18n = useI18n()
+const { t } = useI18n()
 const router = useRouter()
 onMounted(() => {
   console.log("router.getRoutes().filter(v=>v.meta.requiresAuth)", router.getRoutes().filter(v => v.meta.requiresAuth));
@@ -60,10 +64,10 @@ const localesChange1 = (val: string) => {//语言切换
 
 <style scoped lang="scss">
 .active {
-  font-size: 16px;
-
-  .alink {
-    width: 50px;
+  font-size: 10px;
+  // width: 50px;
+  div {
+  font-size: 10px;
   }
 }
 
@@ -82,6 +86,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 100%;
+  // border: 1px solid #333;
 }
 </style>
