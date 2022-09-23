@@ -8,6 +8,7 @@ import alias from '@rollup/plugin-alias'
 import { viteMockServe } from 'vite-plugin-mock'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'path'
+import banner from 'vite-plugin-banner'
 // import { createMock } from './mock';
 export default function createVitePlugins() {
   const vitePlugins = [
@@ -58,6 +59,7 @@ export default function createVitePlugins() {
       setupProdMockServer();
           `,
     }),
+    banner('This is the banner content.'),
   ]
   // vitePlugins.push(createMock());
 
