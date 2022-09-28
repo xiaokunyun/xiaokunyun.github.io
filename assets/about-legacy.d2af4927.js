@@ -1,0 +1,2 @@
+/*! This is the banner content. */
+System.register(["./_plugin-vue_export-helper-legacy.649209c3.js","./index-legacy.06c019e5.js"],(function(e,t){"use strict";var s,n,c,r;return{setters:[e=>{s=e._},e=>{n=e.o,c=e.c,r=e.e}],execute:function(){const t={},i=[r("div",{class:"flex justify-center items-center"},[r("p",null,"本站点已做初步的国际化，和暗夜模式加持 ")],-1),r("div",{class:"fixed bottom-10"}," ssss ",-1)];e("default",s(t,[["render",function(e,t){return n(),c("div",null,i)}]]))}}}));
