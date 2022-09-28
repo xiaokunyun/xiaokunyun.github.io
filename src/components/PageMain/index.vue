@@ -2,6 +2,7 @@
     <div
         :class="{
             'page-main': true,
+            'dark':useStore().theme,
             'is-collaspe': collaspeData
         }" :style="{
             'height': collaspeData ? height : ''
@@ -16,6 +17,8 @@
 </template>
 
 <script setup lang="ts">
+import { useStore } from '@/store/user'
+
 const props = defineProps({
     title: {
         type: String,
@@ -39,11 +42,14 @@ function unCollaspe() {
 </script>
 
 <style lang="scss" scoped>
+.dark{
+  color: #fff;
+}
 .page-main {
     position: relative;
     margin: 20px;
     padding: 20px;
-    background-color: #fff;
+    // background-color: #fff;
     &.is-collaspe {
         overflow: hidden;
         .collaspe {
@@ -55,8 +61,8 @@ function unCollaspe() {
             text-align: center;
             font-size: 24px;
             color: #ccc;
-            text-shadow: 0 0 1px #fff;
-            background: linear-gradient(to bottom, transparent, #fff);
+            // text-shadow: 0 0 1px #fff;
+            // background: linear-gradient(to bottom, transparent, #fff);
             cursor: pointer;
             transition: 0.3s;
             &:hover {

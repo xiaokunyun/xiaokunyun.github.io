@@ -29,7 +29,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
       // https: true,
       // Listening on all local IPs
       host: true,
-      // open: true,
+      open: true,
       port: 3251,
       // Load proxy configuration from .env
       proxy: {
