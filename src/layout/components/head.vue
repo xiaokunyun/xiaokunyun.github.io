@@ -3,7 +3,8 @@
     <div class="w-1/4 flex align-center justify-center">
       <Logo />
     </div>
-    <div class="w-2/4 flex align-center justify-center flex-wrap" :class="{ active: isMobileTerminal }">
+    <div class="w-2/4 flex align-center justify-center flex-wrap"
+      :class="{ active: isMobileTerminal }">
       <div class="w-1/4" v-for="(item, index) in router.getRoutes().filter(v => v.meta.requiresAuth)" :key="index">
         <RouterLink class="alink" :class="{ alinktive: useStore().theme }" :to="item.path">
           <div v-show="item.meta.title == '主页'">{{ $t('home') }}</div>
@@ -63,17 +64,22 @@ const localesChange1 = (val: string) => {//语言切换
 </script>
 
 <style scoped lang="scss">
+// .fontsizes {
+//   font-size: 13px;
+// }
+
 .active {
   // font-size: 1px;
   // width: 50px;
   div {
-    font-size: 18px;
+    font-size: 13px;
   }
 
   svg {
     font-size: 26px;
   }
 }
+
 svg {
   font-size: 26px;
 }
