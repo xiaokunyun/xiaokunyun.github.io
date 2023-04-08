@@ -7,20 +7,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AAvatar: typeof import('@arco-design/web-vue')['Avatar']
-    AButton: typeof import('@arco-design/web-vue')['Button']
     ACarousel: typeof import('@arco-design/web-vue')['Carousel']
     ACarouselItem: typeof import('@arco-design/web-vue')['CarouselItem']
     AConfigProvider: typeof import('@arco-design/web-vue')['ConfigProvider']
-    AForm: typeof import('@arco-design/web-vue')['Form']
-    AFormItem: typeof import('@arco-design/web-vue')['FormItem']
-    AInput: typeof import('@arco-design/web-vue')['Input']
-    AInputPassword: typeof import('@arco-design/web-vue')['InputPassword']
-    AList: typeof import('@arco-design/web-vue')['List']
-    AListItem: typeof import('@arco-design/web-vue')['ListItem']
-    AListItemMeta: typeof import('@arco-design/web-vue')['ListItemMeta']
     AppVideoItem: typeof import('./components/app-video-item.vue')['default']
-    ASpace: typeof import('@arco-design/web-vue')['Space']
     AStatistic: typeof import('@arco-design/web-vue')['Statistic']
     Border: typeof import('./components/border/index.vue')['default']
     copy: typeof import('./components/Echarts/index copy.vue')['default']

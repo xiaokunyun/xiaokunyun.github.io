@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <div class="wrapper">
-      <div class="slash"></div>
-      <div class="sides">
-        <div class="side"></div>
-        <div class="side"></div>
-        <div class="side"></div>
-        <div class="side"></div>
+  <div class="wrapper">
+    <div class="slash"></div>
+    <div class="sides">
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+    </div>
+    <div class="text">
+      <div class="text--backing">AKUN</div>
+      <div class="text--left">
+        <div class="inner">AKUN</div>
       </div>
-      <div class="text">
-        <div class="text--backing">AKUN</div>
-        <div class="text--left">
-          <div class="inner">AKUN</div>
-        </div>
-        <div class="text--right">
-          <div class="inner">AKUN</div>
-        </div>
+      <div class="text--right">
+        <div class="inner">AKUN</div>
       </div>
     </div>
   </div>
@@ -25,8 +23,9 @@
 
 <style scoped lang="scss">
 .wrapper {
+  @apply text-black  dark:text-light-50;
   position: relative;
-  color: #fff;
+  // color: #fff;
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.12rem;
@@ -45,7 +44,7 @@
     transform-origin: center center;
     width: 0.075rem;
     height: 145%;
-    background: #fff;
+    @apply bg-black  dark:bg-light-50;
     z-index: 4;
     box-shadow: 0 0 10px #27ae60;
     -webkit-animation: slash 6s ease-in infinite;
@@ -53,7 +52,7 @@
   }
 
   .slash:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 50%;
@@ -67,7 +66,7 @@
   }
 
   .slash:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -87,7 +86,8 @@
 
     .side {
       position: absolute;
-      background: #fff;
+      @apply bg-black  dark:bg-light-50;
+
     }
 
     .side:nth-child(1) {
