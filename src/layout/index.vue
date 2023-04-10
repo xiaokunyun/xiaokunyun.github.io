@@ -52,8 +52,8 @@ const { t } = useI18n();
 }
 
 .bganimation {
-  // animation: change 15s infinite;
-  // background: linear-gradient(125deg, LightPink, LightSkyBlue, DarkTurquoise, #27ae60, #2980b9);
+  animation: change 15s infinite;
+  background: linear-gradient(125deg, LightPink, LightSkyBlue, DarkTurquoise, #27ae60, #2980b9);
   // #192f44,#8e44ad,#633bd3,
   background-size: 800%;
 }

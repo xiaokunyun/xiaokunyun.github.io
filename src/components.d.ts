@@ -10,6 +10,8 @@ declare module '@vue/runtime-core' {
     ACarousel: typeof import('@arco-design/web-vue')['Carousel']
     ACarouselItem: typeof import('@arco-design/web-vue')['CarouselItem']
     AConfigProvider: typeof import('@arco-design/web-vue')['ConfigProvider']
+    ADrawer: typeof import('@arco-design/web-vue')['Drawer']
+    AModal: typeof import('@arco-design/web-vue')['Modal']
     AppVideoItem: typeof import('./components/app-video-item.vue')['default']
     AStatistic: typeof import('@arco-design/web-vue')['Statistic']
     Border: typeof import('./components/border/index.vue')['default']

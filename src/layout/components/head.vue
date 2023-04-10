@@ -16,27 +16,16 @@
         <button
           type="button"
           class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          @click="handleClick"
         >
           <span class="sr-only">Open main menu</span>
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+          <icon-menu-fold v-show="pc" />
+          <!-- <icon-close v-show="!pc" /> -->
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <RouterLink
-          class="text-2xl leading-6 text-gray-900 hover: focus:outline-black "
+          class="text-2xl leading-6 text-gray-900 hover: focus:outline-black"
           v-for="(item, index) in router.getRoutes().filter((v) => v.meta.requiresAuth)"
           :key="index"
           :to="item.path"
@@ -63,42 +52,37 @@
         </div>
       </div>
     </nav>
-  </header>
-
-  <!-- <br />
-  <br /> -->
-  <!-- <div class="flex justify-center items-center w-3/4 h-20 text-xl">
-    <div class="w-1/4 flex align-center justify-center">
-      <Logo />
-    </div>
-    <div
-      class="w-2/4 flex align-center justify-center flex-wrap"
-      :class="{ active: isMobileTerminal }"
+    <a-drawer
+      :width="340"
+      :height="340"
+      :visible="visible"
+      placement="top"
+      @ok="handleOk"
+      @cancel="handleCancel"
+      unmountOnClose
+    
     >
-      <div
-        class="w-1/4 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
-        v-for="(item, index) in router.getRoutes().filter((v) => v.meta.requiresAuth)"
-        :key="index"
-      >
-        <RouterLink class="alink" :class="{ alinktive: useStore().theme }" :to="item.path">
+      <template #title>
+        <icon-menu-fold v-show="pc" />
+      </template>
+      <div class="space-y-2 py-6">
+        <RouterLink
+          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover: focus:outline-black"
+          v-for="(item, index) in router.getRoutes().filter((v) => v.meta.requiresAuth)"
+          :key="index"
+          to="#"
+          @click="goGet(item)"
+        >
           <div v-show="item.meta.title == '主页'">{{ $t("home") }}</div>
           <div v-show="item.meta.title == '统计'">{{ $t("Statistics") }}</div>
           <div v-show="item.meta.title == '在线'">{{ $t("online") }}</div>
           <div v-show="item.meta.title == '关于'">{{ $t("about") }}</div>
         </RouterLink>
       </div>
-    </div>
-    <div class="w-1/4 flex align-center justify-center">
-      <div @click="themeChangel()">
-        <icon-moon v-show="useStore().theme == false" />
-        <icon-sun v-show="useStore().theme == true" />
-      </div>
-      <div @click="localesChange1()">
-        <icon-chinese-fill v-show="useStore().locales == 'zh'" />
-        <icon-english-fill v-show="useStore().locales == 'en'" />
-      </div>
-    </div>
-  </div> -->
+      <!-- You can customize modal body text by the current situation. This modal will be closed
+      immediately once you press the OK button. -->
+    </a-drawer>
+  </header>
 </template>
 
 <script setup lang="ts">
@@ -106,9 +90,26 @@ import { useStore } from "@/store/user";
 import { RouteRecordRaw } from "vue-router";
 import { isMobileTerminal } from "@/util/flex";
 import { useI18n } from "vue-i18n";
+// import { Dialog, DialogPanel } from '@headlessui/vue'
 const i18n = useI18n();
 const { t } = useI18n();
 const router = useRouter();
+const pc = ref(true);
+const visible = ref(false);
+const handleClick = () => {
+  visible.value = true;
+};
+const handleOk = () => {
+  visible.value = false;
+};
+const handleCancel = () => {
+  visible.value = false;
+};
+const goGet = (item: any) => {
+  console.log("item", item);
+  router.push(item.path);
+  handleCancel();
+};
 onMounted(() => {
   console.log(
     "router.getRoutes().filter(v=>v.meta.requiresAuth)",
@@ -146,6 +147,10 @@ const localesChange1 = () => {
 // .fontsizes {
 //   font-size: 13px;
 // }
+>>>.arco-drawer-footer{
+  display: none;
+  background: red;
+} 
 
 .active {
   // font-size: 1px;
