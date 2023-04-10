@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script setup >
+<script setup lang="ts">
 //lang="ts"
 import axios from "axios";
 const inputMessage = ref(""); // 使用 ref 函数定义响应式数据
