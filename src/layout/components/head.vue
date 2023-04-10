@@ -147,10 +147,10 @@ const localesChange1 = () => {
 // .fontsizes {
 //   font-size: 13px;
 // }
->>>.arco-drawer-footer{
-  display: none;
-  background: red;
-} 
+// >>>.arco-drawer-footer{
+//   display: none;
+//   background: red;
+// } 
 
 .active {
   // font-size: 1px;
