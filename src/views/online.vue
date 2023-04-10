@@ -1,27 +1,26 @@
 <template>
   <div>
     在Vue模板中添加一个输入框和按钮用于输入和发送消息
-    <div>
+    <!-- <div>
       <input v-model="inputMessage" @keydown.enter="sendMessage" placeholder="请输入消息..." />
       <button @click="sendMessage">发送</button>
       <ul>
-        <!-- 在Vue模板中显示聊天记录 -->
         <li v-for="message in messages" :key="message.id">
           {{ message.sender }}: {{ message.content }}
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup lang="ts">
 //lang="ts"
-import axios from "axios";
-const inputMessage = ref(""); // 使用 ref 函数定义响应式数据
-const messages = ref([]); // 使用 ref 函数定义响应式数据
-const key = "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";
-const model = "text-davinci-003"; // ChatGPT 模型名称
-const sendMessage = () => {
+// import axios from "axios";
+// const inputMessage = ref(""); // 使用 ref 函数定义响应式数据
+// const messages = ref([]); // 使用 ref 函数定义响应式数据
+// const key = "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";
+// const model = "text-davinci-003"; // ChatGPT 模型名称
+// const sendMessage = () => {
   // 向ChatGPT API发送请求并处理响应
   // axios
   //   .post(
@@ -52,7 +51,7 @@ const sendMessage = () => {
   //   .catch((error) => {
   //     console.error(error);
   //   });
-};
+// };
 </script>
 
 <style scoped lang="scss"></style>
